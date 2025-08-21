@@ -1,0 +1,74 @@
+/* Container chatbox fixed di kanan bawah layar */
+  #whatsapp-chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Tombol chat bulat dengan ikon WhatsApp */
+  #whatsapp-chatbox button {
+    background-color: #25d366;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  #whatsapp-chatbox button:hover {
+    background-color: #128c4a;
+  }
+
+  /* Ikon WhatsApp (SVG) */
+  #whatsapp-chatbox svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+  }
+
+  /* Tooltip/deskripsi kecil saat hover */
+  #whatsapp-chatbox .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px 0;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    user-select: none;
+  }
+
+  #whatsapp-chatbox button:hover + .tooltip,
+  #whatsapp-chatbox button:focus + .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Responsif untuk layar kecil */
+  @media (max-width: 480px) {
+    #whatsapp-chatbox button {
+      width: 50px;
+      height: 50px;
+    }
+
+    #whatsapp-chatbox svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    #whatsapp-chatbox .tooltip {
+      width: 100px;
+      font-size: 12px;
+      bottom: 60px;
+    }
+  }
